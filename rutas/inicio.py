@@ -95,6 +95,7 @@ def _mostrar_contenido():
             #### Cómo usar esta aplicación
             Usa el menú de la izquierda para navegar entre secciones:
             - **Exploración** — estructura y calidad del dataset
+            - **Análisis univariado** — distribución de cada variable
            
 
             """

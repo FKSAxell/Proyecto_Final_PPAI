@@ -10,8 +10,12 @@ st.set_page_config(
 rutas ={
     "Proyecto":[
         st.Page("rutas/inicio.py", title="Inicio", icon="🏠"),
-        st.Page("rutas/exploracion.py", title="Exploración del Dataset", icon="📊"),
-    ]
+        st.Page("rutas/exploracion.py", title="Exploración del Dataset", icon="🔍"),
+       
+    ],
+     "Análisis": [
+        st.Page("rutas/univariado.py",     title="Análisis Univariado",     icon="📊"),
+    ],
 }
 def on_click():
     st.session_state.pop("df", None)

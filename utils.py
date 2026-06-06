@@ -35,3 +35,9 @@ COL_ES = {
     "Gender":                     "Género",
 }
 
+def es(col):
+    return COL_ES.get(col, col)
+
+def col_from_es(label, cols):
+    inv = {COL_ES.get(c, c): c for c in cols}
+    return inv.get(label, label)

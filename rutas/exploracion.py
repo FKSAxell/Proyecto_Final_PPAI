@@ -22,19 +22,6 @@ def _tab_estadisticas(df):
     st.dataframe(df[NUMERIC_COLS].describe().T.round(2), width="stretch")
 
 
-def _tab_categoricas(df):
-    st.subheader("Variables categóricas — frecuencias")
-    col_sel = st.selectbox(
-        "Selecciona una variable",
-        options=CATEGORICAL_COLS,
-        format_func=lambda c: COL_ES.get(c, c),
-    )
-    vc = df[col_sel].value_counts().reset_index()
-    vc.columns = ["Categoría", "Frecuencia"]
-    vc["Porcentaje"] = (vc["Frecuencia"] / len(df) * 100).round(2)
-    st.dataframe(vc, hide_index=True, width="stretch")
-
-
 def _tab_nulos(df):
     st.subheader("Valores nulos por columna")
     nulls = df.isnull().sum().reset_index()
@@ -55,14 +42,12 @@ if df is None:
 
 st.title("🔍 Exploración del Dataset")
 
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3 = st.tabs([
     "📋 Estructura",
     "📈 Estadísticas descriptivas",
-    "🏷️ Variables categóricas",
     "🔎 Valores nulos",
 ])
 
 with tab1: _tab_estructura(df)
 with tab2: _tab_estadisticas(df)
-with tab3: _tab_categoricas(df)
-with tab4: _tab_nulos(df)
+with tab3: _tab_nulos(df)
