@@ -10,7 +10,7 @@ if df is None:
 
 
 
-st.title("📊 Análisis Univariado")
+st.title("📈 Análisis Univariado")
 
 tab1, tab2 = st.tabs(["🔢 Variables numéricas", "🔤 Variables categóricas"])
 

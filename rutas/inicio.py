@@ -9,7 +9,7 @@ LOCAL_CSV = "data/StudentPerformanceFactors.csv"
 def _cargar_local():
     st.markdown("#### Carga automática")
     st.markdown(f"Usa el archivo local incluido en el proyecto:  \n`{LOCAL_CSV}`")
-    if st.button("Cargar dataset local", use_container_width=True, type="primary"):
+    if st.button("Cargar dataset local", use_container_width=True, type="secondary"):
         try:
             st.session_state["df"] = pd.read_csv(LOCAL_CSV)
             st.success("Dataset cargado correctamente.")
@@ -52,6 +52,15 @@ def _cargar_manual():
 
 
 def _mostrar_contenido():
+
+    st.markdown("---")
+    st.subheader("Integrantes del equipo")
+    col_i1, col_i2 = st.columns(2)
+    with col_i1:
+        st.markdown("👤 **Kevin Axell Concha Regatto**")
+    with col_i2:
+        st.markdown("👤 **Rogwi Alexis Cajas Correa**")
+    st.markdown("---")
     st.markdown(
         """
         ### Problemática
@@ -100,6 +109,8 @@ def _mostrar_contenido():
 
             """
         )
+
+  
 
     st.markdown("---")
     st.subheader("Vista previa del dataset")

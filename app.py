@@ -14,8 +14,13 @@ rutas ={
        
     ],
      "Análisis": [
-        st.Page("rutas/univariado.py",     title="Análisis Univariado",     icon="📊"),
+        st.Page("rutas/univariado.py",     title="Análisis Univariado",     icon="📈"),
+        st.Page("rutas/bivariado.py",     title="Análisis Bivariado",     icon="📊"),
+        st.Page("rutas/factores.py",     title="Factores Clave",     icon="🏆"),
     ],
+     "Resultados": [
+        st.Page("rutas/conclusiones.py",     title="Conclusiones",     icon="📝"),
+     ]
 }
 def on_click():
     st.session_state.pop("df", None)
