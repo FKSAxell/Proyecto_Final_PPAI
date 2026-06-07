@@ -228,7 +228,7 @@ with r3:
 st.markdown("---")
 
 # ── Referencias ──────────────────────────────────────────────────────────────
-with st.expander("📚 Referencias en formato APA 7.ª edición"):
+with st.expander("📚 Referencias"):
     st.markdown(
         """
         - Lainguyn (2023). *Student Performance Factors* [Dataset].
